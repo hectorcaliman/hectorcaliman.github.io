@@ -829,7 +829,7 @@ footer a.icon {
     padding: 10px;
     background: none;
     color: #31353a; }
-  .btn.btn-default, .btn.btn-warning, .btn.btn-info, .btn.btn-error, .btn.btn-accent {
+ .btn.btn-default, .btn.btn-warning, .btn.btn-info, .btn.btn-error, .btn.btn-accent, .btn.btn-instagram, .btn.btn-behance, .btn.btn-linkedin {
     padding: 10px 20px;
     color: #fff;
     -webkit-transition: all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005);
@@ -840,6 +840,18 @@ footer a.icon {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     border-radius: 3px; }
+  .btn.btn-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    .btn.btn-instagram:hover {
+      background: radial-gradient(circle at 30% 107%, #fdf470 0%, #fdf470 5%, #fd5910 45%,#d6250f 60%,#290AEB 90%); }  
+  .btn.btn-behance {
+    background: #053eff; }
+    .btn.btn-behance:hover {
+      background: #002fd0; }
+  .btn.btn-linkedin {
+    background: #0e76a8; }
+    .btn.btn-linkedin:hover {
+      background: #0b5e86; }
   .btn.btn-default {
     background: #31353a; }
     .btn.btn-default:hover {
