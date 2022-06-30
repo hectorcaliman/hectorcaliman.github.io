@@ -132,6 +132,16 @@ p {
     .title-block {
       margin-bottom: 30px; } }
 
+.texto-curriculo{
+  font-size: 0.7em; }
+.curriculo-h3{
+  margin-bottom: 10px; }
+.curriculo-h4 {
+  margin-top: 0px; } 
+@media screen and (max-width: 767px) {
+  .texto-curriculo{
+  font-size: 0.9em; } }
+
 /*-----------
 
 	04 Layout 	
@@ -212,6 +222,7 @@ section, footer {
       color: #999; }
     section.bg-accent h1, section.bg-accent h2, section.bg-accent h3, section.bg-accent h4, section.bg-accent h5, section.bg-accent h6, footer.bg-accent h1, footer.bg-accent h2, footer.bg-accent h3, footer.bg-accent h4, footer.bg-accent h5, footer.bg-accent h6 {
       color: #fff; }
+/*----------- atualização global de todas as seções Dark -----*/      
   section.bg-dark, footer.bg-dark {
     background: #31353a; }
     section.bg-dark *, footer.bg-dark * {
@@ -222,9 +233,15 @@ section, footer {
       color: #fff; }
     section.bg-dark a, footer.bg-dark a {
       color: #fff !important; }
-  section.bg-darker, footer.bg-darker {
-    background: #222; }
-    section.bg-darker *, footer.bg-darker * {
+    footer.bg-darker {
+      background: #222; }
+    section.bg-darker{
+      background: rgb(98,86,156);
+      background: -moz-linear-gradient(63deg, rgba(98,86,156,1) 0%, rgba(150,38,98,1) 100%);
+      background: -webkit-linear-gradient(63deg, rgba(98,86,156,1) 0%, rgba(150,38,98,1) 100%);
+      background: linear-gradient(63deg, rgba(98,86,156,1) 0%, rgba(150,38,98,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#62569c",endColorstr="#962662",GradientType=1);}
+  section.bg-darker *, footer.bg-darker * {
       color: #999; }
     section.bg-darker h1, section.bg-darker h2, section.bg-darker h3, section.bg-darker h4, section.bg-darker h5, section.bg-darker h6, footer.bg-darker h1, footer.bg-darker h2, footer.bg-darker h3, footer.bg-darker h4, footer.bg-darker h5, footer.bg-darker h6 {
       color: #fff; }
@@ -260,6 +277,27 @@ section, footer {
       max-width: 100%;
       margin: 30px 0; }
 
+/*----------- atualização da página de obrigado -----*/
+
+    section.bg-faded-obrigado, footer.bg-faded-obrigado {
+    background: #31353a; }
+    section.bg-faded-obrigado *, footer.bg-faded-obrigado * {
+      color: #999; }
+    section.bg-faded-obrigado h1, section.bg-faded-obrigado h2, section.bg-faded-obrigado h3, section.bg-faded-obrigado h4, section.bg-faded-obrigado h5, section.bg-faded-obrigado h6, footer.bg-faded-obrigado h1, footer.bg-faded-obrigado h2, footer.bg-faded-obrigado h3, footer.bg-faded-obrigado h4, footer.bg-faded-obrigado h5, footer.bg-faded-obrigado h6 {
+      color: #fff; }
+    section.bg-faded-obrigado .fa, footer.bg-faded-obrigado .fa {
+      color: #fff; }
+    section.bg-faded-obrigado a, footer.bg-faded-obrigado a {
+      color: #fff !important; }
+    footer.bg-faded-obrigadoer {
+      background: #222; }  
+    section.bg-faded-obrigado{
+      background: rgb(79,100,184);
+      background: -moz-linear-gradient(62deg, rgba(79,100,184,1) 0%, rgba(86,39,142,1) 75%);
+      background: -webkit-linear-gradient(62deg, rgba(79,100,184,1) 0%, rgba(86,39,142,1) 75%);
+      background: linear-gradient(62deg, rgba(79,100,184,1) 0%, rgba(86,39,142,1) 75%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4f64b8",endColorstr="#56278e",GradientType=1);}  
+
 .row {
   max-width: 1450px;
   margin: 0 auto; }
@@ -284,6 +322,17 @@ footer a.icon {
   footer a.icon:hover {
     text-decoration: none;
     color: #222; }
+footer i.icon {
+  display: inline-block;
+  margin: 0 9px 20px;
+  -webkit-transition: all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005);
+  -moz-transition: all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005);
+  -o-transition: all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005);
+  transition: all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005); }
+  footer i.icon:hover {
+    text-decoration: none;
+    color: #222; }
+
 
 .bottom-nav header, .top-nav header {
   padding: 0 85px 60px 85px;
@@ -706,7 +755,7 @@ footer a.icon {
       background: #31353a; }
 
 .nav-tabs li {
-  text-transform: uppercase;
+  text-transform: ;
   margin: 0 -1px -2px 0 !important;
   background: #fff;
   border: 1px solid #ddd;
@@ -772,23 +821,23 @@ footer a.icon {
     box-shadow: 0 0 0 0; }
 
 .profile {
-  margin: 30px 0;
+  margin: 0px 0;
   text-align: center; }
   .profile .avatar {
     display: inline-block;
     position: relative;
     text-align: center;
-    padding: 40px 40px 0;
+    padding: 0px 0px 0;
     margin: 0; }
     .profile .avatar img {
       width: 100%;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      border-radius: 3px; }
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      border-radius: 15px; }
   .profile .description h3 {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
     width: auto;
     display: inline-block; }
@@ -805,6 +854,8 @@ footer a.icon {
     .profile .description .social .icon:hover {
       color: #31353a;
       text-decoration: none; }
+
+
   @media screen and (max-width: 767px) {
     .profile {
       margin: 0; } }
@@ -829,7 +880,7 @@ footer a.icon {
     padding: 10px;
     background: none;
     color: #31353a; }
- .btn.btn-default, .btn.btn-warning, .btn.btn-info, .btn.btn-error, .btn.btn-accent, .btn.btn-instagram, .btn.btn-behance, .btn.btn-linkedin {
+  .btn.btn-default, .btn.btn-warning, .btn.btn-info, .btn.btn-error, .btn.btn-accent, .btn.btn-instagram, .btn.btn-behance, .btn.btn-linkedin {
     padding: 10px 20px;
     color: #fff;
     -webkit-transition: all 0.3s cubic-bezier(0.35, 0.085, 0.305, 1.005);
@@ -926,6 +977,18 @@ blockquote {
     .service h3 {
       margin-bottom: 25px; } }
 
+.service h3 {
+  margin-bottom: 30px; }
+.service p {
+  font-size: .8em; }
+.service .fa {
+  margin-top: 20px; }
+@media screen and (max-width: 927px) {
+  .service {
+    margin: 40px 0; }
+    .service h3 {
+      margin-bottom: 25px; } }
+
 .fa {
   color: #31353a; }
 
@@ -950,6 +1013,9 @@ blockquote {
         padding: 0 !important; } }
   .jumbotron.small {
     height: 50%; }
+      @media screen and (max-width: 992px) {
+      .jumbotron.small {
+        height: 20%; } }
   .jumbotron .bg {
     background-size: cover !important;
     background-position: center center;
@@ -1000,6 +1066,7 @@ blockquote {
   .jumbotron.dark * {
     color: #fff;
     border-color: #fff; }
+
 
 .blog-date {
   margin-top: 25px;
