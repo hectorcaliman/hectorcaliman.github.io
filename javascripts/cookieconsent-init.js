@@ -73,7 +73,16 @@ window.addEventListener('load', function(){
                                 value: 'necessary',
                                 enabled: true,
                                 readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
-                            }
+                            },
+                            cookie_table: [             // list of all expected cookies
+                                {
+                                    col1: '^_gtm',       // match all cookies starting with "_ga"
+                                    col2: 'google.com',
+                                    col3: 'Indeterminado',
+                                    col4: 'Gerenciador de Tags do Google',
+                                    is_regex: true
+                                },
+                            ]
                         }, {
                             title: 'Cookies de Performance e Analíticos',
                             description: 'Esses Cookies coletam informações e monitoram as ações dentro do site, cliques, páginas visitadas. Eles não serão usados para identificar quem acessou e todo o acesso será anônimo.',
@@ -84,14 +93,14 @@ window.addEventListener('load', function(){
                             },
                             cookie_table: [             // list of all expected cookies
                                 {
-                                    col1: '^_gtm',       // match all cookies starting with "_ga"
+                                    col1: '^_ga',       // match all cookies starting with "_ga"
                                     col2: 'google.com',
                                     col3: '5 anos',
                                     col4: 'Gerenciador de Tags do Google',
                                     is_regex: true
                                 },
                                 {
-                                    col1: '^_gid',
+                                    col1: '_gid',
                                     col2: 'smartlook.com',
                                     col3: '180 dias',
                                     col4: 'Mapa de calor do site.',
@@ -118,7 +127,7 @@ window.addEventListener('load', function(){
                                 col1: '^_aw',               // New option in v2.4: regex (microsoft clarity cookies)
                                 col2: 'google.com',
                                 col3: '180 dias',
-                                col4: 'Tag de conversão do Google Analytics',
+                                col4: 'Tag de conversão do Google Ads',
                                 // path: '/',               // New option in v2.4
                                 is_regex: true              // New option in v2.4
                             }
