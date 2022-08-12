@@ -1,0 +1,275 @@
+/*----------- 
+
+  Tab by Alex
+  Source: https://codepen.io/woranov/pen/NRqLWK/; 
+  2016
+  Update: SCSS was transcribed to CSS;
+
+-------------*/
+
+/*----------- 
+
+00 Tabs
+01 colors
+02 tab setting
+03 breakpoints
+04 selectors relative to radio inputs 
+
+-------------*/
+
+/*----------- 
+
+00 Tabs
+
+-------------*/
+
+.tabs-curriculo {
+ /* left: 50%; 
+  transform: translateX(-50%); */
+  position: center;
+  background: white;
+  padding: 50px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.tabs-curriculo input[name=tab-control] {
+  display: none;
+}
+.tabs-curriculo .content-curriculo .section-curriculo ,
+.tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo {
+  font-family: "Roboto",  sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #428BFF;
+}
+.tabs-curriculo .ul-curriculo {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.tabs-curriculo .ul-curriculo .li-curriculo {
+  box-sizing: border-box;
+  flex: 1;
+  width: 70%;
+  padding: 0 10px;
+  text-align: center;
+}
+.tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo {
+  transition: all 0.3s ease-in-out;
+  color: #929daf;
+  padding: 5px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+}
+.tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo br {
+  display: none;
+}
+.tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo:hover, .tabs-curriculo.ul-curriculo .li-curriculo .label-curriculo:focus, .tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo:active {
+  outline: 0;
+  color: #bec5cf;
+}
+.tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo:hover svg, .tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo:focus svg, .tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo:active svg {
+  fill: #bec5cf;
+}
+.tabs-curriculo .slider-curriculo {
+  position: relative;
+  width: 20%;
+  transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+.tabs-curriculo .slider-curriculo .indicator-curriculo {
+  position: relative;
+  width: 120px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 4px;
+  background: #428BFF;
+  border-radius: 1px;
+}
+.tabs-curriculo .content-curriculo {
+  margin-top: 30px;
+}
+.tabs-curriculo .content-curriculo .section-curriculo {
+  display: none;
+  animation-name: content;
+  animation-direction: normal;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  line-height: 1.4;
+}
+.tabs-curriculo .content-curriculo .section-curriculo h2 {
+  color: #428BFF;
+  display: none;
+}
+.tabs-curriculo .content-curriculo .section-curriculo h2::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #428BFF;
+  margin-top: 5px;
+  left: 1px;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(1):checked ~ .ul-curriculo > .li-curriculo:nth-child(1) > .label-curriculo {
+  cursor: default;
+  color: #428BFF;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(1):checked ~ .ul-curriculo > .li-curriculo:nth-child(1) > .label-curriculo svg {
+  fill: #428BFF;
+}
+@media (max-width: 750px) {
+  .tabs-curriculo input[name=tab-control]:nth-of-type(1):checked ~ .ul-curriculo > .li-curriculo:nth-child(1) > .label-curriculo {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(1):checked ~ .slider-curriculo {
+  transform: translateX(0%);
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(1):checked ~ .content-curriculo > .section-curriculo:nth-child(1) {
+  display: block;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(2):checked ~ .ul-curriculo > .li-curriculo:nth-child(2) > .label-curriculo {
+  cursor: default;
+  color: #428BFF;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(2):checked ~ .ul-curriculo > .li-curriculo:nth-child(2) > .label-curriculo svg {
+  fill: #428BFF;
+}
+@media (max-width: 750px) {
+  .tabs-curriculo input[name=tab-control]:nth-of-type(2):checked ~ .ul-curriculo > .li-curriculo:nth-child(2) > .label-curriculo {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(2):checked ~ .slider-curriculo {
+  transform: translateX(100%);
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(2):checked ~ .content-curriculo > .section-curriculo:nth-child(2) {
+  display: block;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(3):checked ~ .ul-curriculo > .li-curriculo:nth-child(3) > .label-curriculo {
+  cursor: default;
+  color: #428BFF;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(3):checked ~ .ul-curriculo > .li-curriculo:nth-child(3) > .label-curriculo svg {
+  fill: #428BFF;
+}
+@media (max-width: 750px) {
+  .tabs-curriculo input[name=tab-control]:nth-of-type(3):checked ~ .ul-curriculo > .li-curriculo:nth-child(3) > .label-curriculo {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(3):checked ~ .slider-curriculo {
+  transform: translateX(200%);
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(3):checked ~ .content-curriculo > .section-curriculo:nth-child(3) {
+  display: block;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(4):checked ~ .ul-curriculo > .li-curriculo:nth-child(4) > .label-curriculo {
+  cursor: default;
+  color: #428BFF;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(4):checked ~ .ul-curriculo > .li-curriculo:nth-child(4) > .label-curriculo svg {
+  fill: #428BFF;
+}
+@media (max-width: 750px) {
+  .tabs-curriculo input[name=tab-control]:nth-of-type(4):checked ~ .ul-curriculo > .li-curriculo:nth-child(4) > .label-curriculo {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(4):checked ~ .slider-curriculo {
+  transform: translateX(300%);
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(4):checked ~ .content-curriculo > .section-curriculo:nth-child(4) {
+  display: block;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(5):checked ~ .ul-curriculo > .li-curriculo:nth-child(5) > .label-curriculo {
+  cursor: default;
+  color: #428BFF;
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(5):checked ~ .ul-curriculo > .li-curriculo:nth-child(5) > .label-curriculo svg {
+  fill: #428BFF;
+}
+@media (max-width: 750px) {
+  .tabs-curriculo input[name=tab-control]:nth-of-type(5):checked ~ .ul-curriculo > .li-curriculo:nth-child(5) > .label-curriculo {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(5):checked ~ .slider-curriculo {
+  transform: translateX(400%);
+}
+.tabs-curriculo input[name=tab-control]:nth-of-type(5):checked ~ .content-curriculo > .section-curriculo:nth-child(5) {
+  display: block;
+}
+@keyframes content {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@media (max-width: 1250px) {
+  .tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo {
+    white-space: initial;
+  }
+  .tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo br {
+    display: initial;
+  }
+}
+@media (max-width: 750px) {
+  .tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .tabs-curriculo .ul-curriculo .li-curriculo .label-curriculo span {
+    display: ;
+  }
+  .tabs-curriculo .slider-curriculo {
+    display: none;
+  }
+  .tabs-curriculo .content-curriculo {
+    margin-top: 1px;
+  }
+  .tabs-curriculo .content-curriculo .section-curriculo h2 {
+    display: block;
+  }
+}
+
+.section-curriculo {
+  margin: 1vw;
+  padding: 0.5vw;
+
+}
+
+.section-tabela {
+  min-height: 25vw;
+  padding: 0px;
+  padding-bottom: 100p;
+};
+
+  @media (max-width: 1240px) {
+      .section-tabela {
+        height: 300vw;
+    };
+  }
+
+  @media (max-width: 750px) {
+      .section-tabela {
+        height: 220vw;
+    };
+  }
