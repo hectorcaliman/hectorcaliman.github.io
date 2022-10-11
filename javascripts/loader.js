@@ -3,6 +3,7 @@
 Be Load Script
 Version 1.0
 Made by Themanoid
+Modified by Hector
 
 */
 
@@ -14,17 +15,17 @@ Made by Themanoid
     // Variables
     var loader = $('<div class="loader"><div class="bar-container"><div class="bar"></div></div></div>'),
      	bar = loader.find('.bar');
-    
-    // Prepend the loader to the body
+	
+ /*    // Prepend the loader to the body (not use anymore)
     $('body').prepend(loader);
 
     // Animate the load bar
     animateLoadBar();
-
-    // On load
+*/
+   // On load
     $(window).load(function(){
     	finishLoadBar();
-    	loader.delay(900).fadeOut(400, function(){
+    	loader.delay(0).fadeOut(0, function(){
 	    	$(this).remove();
 	    	$('.container-fluid').addClass('loaded');
 	    });
@@ -33,13 +34,13 @@ Made by Themanoid
     function animateLoadBar(){
     	bar.animate({
     		'width' : '60%'
-    	}, 900, 'easeInOutQuart');
+    	}, 0, 'easeInOutQuart');
     }
 
     function finishLoadBar(){
     	bar.animate({
     		'width' : '100%'
-    	}, 400, 'easeInOutQuart');
+    	}, 0, 'easeInOutQuart');
     }
     
 })(jQuery);
