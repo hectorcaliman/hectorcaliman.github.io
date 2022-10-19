@@ -161,6 +161,7 @@ p {
   letter-spacing: 0.1rem;
   text-align: safe left;
   overflow: hidden;
+  color: #ffffff;
 }
 .container-text h1 span.typed-text {
   font-weight: 300;
