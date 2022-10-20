@@ -1061,6 +1061,25 @@ blockquote {
       @media screen and (max-width: 992px) {
       .jumbotron.small {
         height: 20%; } }
+.jumbotron.minimum {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 40%;
+  z-index: 0;
+  margin: 0;
+  padding: 35px 47px;
+  vertical-align: top;
+  font-size: 20px;
+  overflow: hidden;
+  background: #000;
+  border-radius: 0 !important; }
+  @media screen and (max-width: 992px) {
+    .jumbotron.minimum {
+      min-height: 30%;
+      height: auto; }
+      .jumbotron.minimum .block {
+        padding: 0 !important; } }
   .jumbotron .bg {
     background-size: cover !important;
     background-position: center center;
