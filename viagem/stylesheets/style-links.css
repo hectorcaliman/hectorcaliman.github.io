@@ -1,0 +1,703 @@
+@charset "UTF-8";
+
+/*----------
+
+Agregador de Links personalizados
+Version 2.0
+Made by Hector Caliman
+
+  SUMÁRIO
+  _________________
+
+  01. Geral
+  02. Divisões e Elementos visuais
+  03. Botões e Icones
+  04. Head e Textos
+  05. Consentimento
+
+-------------*/
+
+@import url(bootstrap.css);
+@import url(bootstrap.min.css);
+@import url(cookieconsent.css);
+@import url(flipdown.css);
+
+/*--------------
+
+01 Geral 
+
+--------------*/
+
+html {
+  color: #2d2d2d;
+  position: relative;
+}
+
+
+body {
+ 
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column !important;
+}
+    @media screen and (max-width: 960px){
+        body {
+            color: #2d2d2d;
+            margin-left: 10vw; 
+            margin-right: 10vw; 
+            border-right: 3vw;
+        } }
+      
+    @media screen and (max-width: 480px) {
+        body {
+            color: #2d2d2d;
+            margin-left: 25vw; 
+            margin-right: 25vw; 
+            border-right: 3vw;
+        } }
+
+footer{
+  align-items: center;
+  text-align: center;
+  /*padding: 20px;*/
+  margin-top: auto;
+  margin-bottom: 0px;
+  /*margin-left: 10px;*/
+}
+  @media screen and (max-width: 960px) {
+    footer{
+        align-items: center;
+        text-align: center;
+      } }
+
+  @media screen and (max-width: 575px) {
+    footer{
+        align-items: center;
+        text-align: center;
+        margin-top: auto;
+      } }
+
+.navbar-opacity{
+  margin-bottom: 5vw;
+  color: rgba(0, 0, 0, 0.9);
+
+}
+
+/*-------------
+
+02 Divisões e Elementos visuais
+
+------------*/   
+#espaçamento {
+  margin-top: 10vh;
+}
+
+
+.profile-photo{
+  display: flex; 
+  align-items: center; 
+  width: 25vw; 
+  height: 25vw; 
+  size: 100%;
+  border-radius: 1.8VW; 
+  margin-bottom: -4.5vw;
+  margin-top: 1vw; 
+  margin-left: auto; 
+  margin-right: auto;
+  box-shadow: 0 0.125em 1.025em #000000;
+  box-shadow: 0 0.125em 1.025em rgba(1.8, 1.8, 2.8, 0.26);
+}
+  @media screen and (max-width: 960px) {
+    .profile-photo{
+        display: flex;
+        align-items: center;
+        width: 20vw;
+        height: 20vw;
+        max-size: 100%;
+        border-radius: 3vw;
+        margin-bottom: -4.5vw;
+        margin-top: 1vw;
+        margin-left: auto; 
+        margin-right: auto; 
+      } }
+
+  @media screen and (max-width: 575px) {
+    .profile-photo{
+        display: flex;
+        align-items: center;
+        width: 12vw;
+        height: 12vw;
+        max-size: 100%;
+        border-radius: 1vw;
+        margin-bottom: -4.5vw;
+        margin-top: 1vw;
+        margin-left: auto; 
+        margin-right: auto;
+      } }
+
+.photo-viagem {
+  display: flex; 
+  align-items: center; 
+  width: 12vw; 
+  height: 12vw; 
+  size: 100%;
+  border-radius: 1.8VW; 
+  margin-bottom: 1.8vw;
+  margin-top: 1vw; 
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+  @media screen and (max-width: 960px) {
+    .photo-viagem {
+        display: flex;
+        align-items: center;
+        width: 18vw;
+        height: 18vw;
+        max-size: 100%;
+        border-radius: 3vw;
+        margin-bottom: 3vw;
+        margin-top: 1vw;
+        margin-left: auto; 
+        margin-right: auto;
+ 
+      } }
+
+  @media screen and (max-width: 575px) {
+    .photo-viagem {
+        display: flex;
+        align-items: center;
+        width: 35vw;
+        height: 35vw;
+        max-size: 100%;
+        border-radius: 1vw;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+        margin-left: auto; 
+        margin-right: auto;
+        border-radius: 1.8VW; 
+        margin-bottom: 1.5vw;
+      } }
+
+
+.head {
+  align-items: center; 
+  text-align: center;
+  max-width: 100%; 
+  max-height: 100%; 
+  margin: auto;
+}
+  @media screen and (max-width: 960px) {
+      .head{
+        display: flex;
+        align-items: center; 
+        text-align: center;
+        align-content: center; 
+        max-width: auto; 
+        max-height: auto; 
+        margin: auto;
+      } }
+     
+  @media screen and (max-width: 480px) {
+    .head{
+        display: flex;
+        align-items: center; 
+        text-align: center;
+        align-content: center; 
+        max-width: auto; 
+        max-height: auto; 
+        margin: auto;
+      } }    
+
+.div-head{
+    margin-left: 3vw; 
+    margin-right:3vw; 
+    margin-top: 3vw;
+}
+  @media screen and (max-width: 960px) {
+      .div-head{
+        margin-left: 3vw; 
+        margin-right:3vw; 
+        margin-top: 3vw;
+        width: auto;
+        height: auto;
+        align-content: center;
+        text-align: center;
+        } }    
+
+  @media screen and (max-width: 480px) {
+    .div-head{
+        margin-left: 3vw; 
+        margin-right:3vw; 
+        margin-top: 3vw;
+        width: auto;
+        height: auto;
+        align-content: center;
+        text-align: center;
+      } }
+
+.head-text{
+    width: auto;
+    height: auto;
+    align-content: center;
+    text-align: center;
+}
+  @media screen and (max-width: 960px) {
+      .head-text{
+          width: auto;
+          height: auto;
+          align-content: center;
+          text-align: center;
+      } } 
+    
+  @media screen and (max-width: 480px) {
+    .head-text{
+        width: auto;
+        height: auto;
+        align-content: center;
+        text-align: center;
+      } }
+
+
+.video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    z-index: -5;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#roteiro-viagem {
+  margin: auto !important;
+  color:#ffffff ;
+}
+  @media screen and (max-width: 960px) {
+      #roteiro-viagem {
+          margin-left: 4vw;
+      } } 
+    
+  @media screen and (max-width: 480px) {
+    #roteiro-viagem {
+      margin-left: 8vw;
+    }}
+
+#opacidade {
+  color: #2d2d2d;
+  opacity: rgba(0, 0, 0, 0.6) !important;
+}
+
+container-fluid {
+  opacity: rgba(0, 0, 0, 0.6) !important;
+  color: #2d2d2d;
+}
+/*--------------
+
+03 Botões e Icones 
+
+--------------*/
+
+.botão {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3vw;
+  align-items: center;
+  margin: 5vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  background: #069cc2; 
+  border-radius: 10px; 
+  padding: 4vw; 
+  color: #fff; 
+  border: none;
+  align-content: center;
+  width: auto;
+}
+    .botão:hover {
+        background: #098fb3; 
+    }
+
+  @media screen and (max-width: 960px) {
+    .botão {
+        font-size: 2vw;
+        align-items: center;
+        margin: 2vw;
+        margin-right: auto;
+        margin-left: auto;
+        background: #069cc2; 
+        border-radius: 0.5vw; 
+        padding: 2vw; 
+        color: #fff; 
+        border: none;
+        align-content: center;
+        max-width: 40vw;
+        display: flex;
+      } }    
+
+  @media screen and (max-width: 480px) {
+    .botão {
+        font-size: 1vw;
+        align-items: center;
+        margin: 1vw;
+        margin-right: auto;
+        margin-left: auto;
+        background: #069cc2; 
+        border-radius: 0.5vw; 
+        padding: 1vw; 
+        color: #fff; 
+        border: none;
+        align-content: center;
+        max-width: 30vw;
+        display: flex;
+      } }
+
+.fa {
+  margin-right: 1vw;
+  margin-left: auto;
+  font-size: 1.8vw;
+  color: #ffffff;
+}
+  @media screen and (max-width: 960px) {
+    .fa {
+        margin-right: 2vw;
+        font-size: 2.2vw;
+      } }
+
+  @media screen and (max-width: 575px) {
+    .fa {
+        margin-right: 1vw;
+        font-size: 3vw;
+          margin-left: 3vh;
+      } }
+
+/*-----------
+
+04 Textos
+
+-----------*/
+h1, h2, h3, h4, h5, h6, a, br {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2.5vw;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1vw;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+        font-weight: 500;
+        font-size: 3vw;
+        text-align: center;
+        margin-top: 1vw;
+      } }
+
+  @media screen and (max-width: 960px) {
+    h1 {
+        font-weight: 500;
+        font-size: 2.8vw;
+        text-align: center;
+        margin-top: 1vw;
+
+      } }
+
+  @media screen and (max-width: 575px) {
+    h1 {
+        font-weight: 500;
+        font-size: 6.5vw;
+        text-align: center;
+        margin-top: 0.8vw;
+      } }
+
+h2 {
+  font-weight: 400;
+  font-size: 1.8vw;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0.1vw;
+  margin-left: 6vw; 
+  margin-right: 6vw;
+}
+
+    @media screen and (max-width: 1024px) {
+    h2 {  
+      font-weight: 400;
+      font-size: 3.2vw;
+      color: #ffffff;
+      text-align: center;
+      margin-top: 0.1vw;
+      margin-left: 2vw; 
+      margin-right: 2vw;
+    }
+
+    @media screen and (max-width: 960px) {
+    h2 {
+        font-weight: 400;
+        font-size: 2vw;
+        text-align: center;
+        margin-top: 0.2vw;
+        margin-left: 8vw; 
+        margin-right: 8vw;
+      } }
+
+  @media screen and (max-width: 575px) {
+    h2 {
+        font-weight: 400;
+        font-size: 1.5vw;
+        text-align: center;
+        margin-top: 0.7vw;
+        margin-left: 6vw; 
+        margin-right: 6vw;
+      } }
+
+h3 {
+  font-weight: 500;
+  font-size: 3.5vw;
+  color: #ffffff;
+  text-align: center;
+  margin-top: auto;
+  margin-left: auto; 
+  margin-right: auto;
+}
+  @media screen and (max-width: 960px) {
+    h3 {
+        font-weight: 500;
+        font-size: 1.8vw;
+        text-align: center;
+      } }    
+
+  @media screen and (max-width: 575px) {
+    h3 {
+        font-weight: 500;
+        font-size: 1.2vw;
+        text-align: center;
+      } }
+
+h4 {
+    font-weight: 500;
+    font-size: 8vw;
+    color: #ffffff;
+    text-align: left;
+    margin-top: auto;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+  @media screen and (max-width: 1024px) {
+    h4 {
+        font-size: 3vw;
+      } }
+
+  @media screen and (max-width: 960px) {
+    h4 {
+        font-size: 3.5vw;
+      } }    
+
+  @media screen and (max-width: 575px) {
+    h4 {
+        font-size: 4.5vw;
+      } }
+
+
+h6 {
+  font-weight: 100;
+  font-size: 1.1vw;
+  color: #ffffff;
+}
+  @media screen and (max-width: 960px) {
+    h6 {
+        font-weight: 100;
+        font-size: 1.5vw;
+      } }
+  @media screen and (max-width: 575px) {
+    h6 {
+        font-weight: 100;
+        font-size: 3vw;
+      }
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 6vw;
+  font-weight: 400;
+}
+
+  @media screen and (max-width: 1024px) {
+      a {
+          text-decoration: none;
+          font-size: 3vw;
+        } }
+
+  @media screen and (max-width: 960px) {
+      a {
+          text-decoration: none;
+          font-size: 2.2vw;
+        } }
+  @media screen and (max-width: 575px) {
+      a {
+        text-decoration: none;
+        font-size: 4.4vw;
+      } }
+
+
+/*   
+
+Contador
+
+*/
+
+.countdown {
+	margin-right: 10vh;
+  margin-left: 10vh;
+  box-align: center;
+}
+
+  @media screen and (max-width: 1024px) {
+      .countdown {
+          margin-right: 5vh;
+          margin-left: 5vh;
+        } }
+
+  @media screen and (max-width: 960px) {
+      .countdown {
+          margin-right: 1vh;
+          margin-left: 1vh;
+        } }
+  @media screen and (max-width: 575px) {
+      .countdown {
+          margin-right: 1.8vh;
+          margin-left: 1.8vh;
+      } }
+
+.countdown .square {
+	display: inline-block;
+  box-align: center;
+  width: 12vh;
+  height: auto;
+}
+
+  @media screen and (max-width: 1024px) {
+      .countdown .square {
+          width: 11.2vh;
+        } }
+
+  @media screen and (max-width: 960px) {
+      .countdown .square {
+          width: 11vh;
+        } }
+  @media screen and (max-width: 575px) {
+      .countdown .square {
+        width: 3.2vh;
+      } }
+
+.countdown .numb {
+	font-size: 7vh;
+	font-weight: 500;
+  box-align: center;
+  width: auto;
+  height: auto;
+	text-align: center;
+  color:#f63440;
+  margin-bottom: -2vh;
+}
+
+  @media screen and (max-width: 1024px) {
+      .countdown .numb {
+            font-size: 5vh;
+        } }
+
+  @media screen and (max-width: 960px) {
+      .countdown .numb {
+          font-size: 5.5vw;
+        } }
+  @media screen and (max-width: 575px) {
+      .countdown .numb {
+          font-size: 6vw;
+      } }
+
+
+.countdown .text {
+  font-size: 3vh;
+  /*line-height: 15px;*/
+  text-align: center;
+  color: #2d2d2d;
+  width: 4vh;
+  height: 3vh;
+}
+
+  @media screen and (max-width: 1024px) {
+      .countdown .text {
+            font-size: 3vh;
+        } }
+
+  @media screen and (max-width: 960px) {
+      .countdown .text {
+          font-size: 2.5vw;
+        } }
+  @media screen and (max-width: 575px) {
+      .countdown .text {
+          font-size: 4vw;
+            width: 10vh;
+            height: 2vh;
+      } }
+
+
+/*---- backup do countdown 
+
+.wrap-countdown {
+  margin-bottom: 1px;
+  box-align: center !important;
+}
+
+.countdown .square {
+  display: inline-block;
+  box-align: right;
+}
+
+.countdown .square .numb {
+  font-size: 48px;
+  line-height: 90px;
+  font-weight: 500;
+  box-align: center;
+  width: 100px;
+  height: 90px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f63440;
+}
+
+.countdown .square .text {
+  font-size: 18px;
+  line-height: 15px;
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+@media only screen and ( max-width: 991px ) {
+  .countdown .square {
+    margin-bottom: 20px;
+  }
+}
+
+.countdown .text {
+  font-size: 18px;
+  line-height: 15px;
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+ -----*/}
