@@ -2,8 +2,8 @@
 
 /*----------
 
-Agregador de Links personalizados
-Version 2.0
+Página de viagem
+Version 1.0
 Made by Hector Caliman
 
   SUMÁRIO
@@ -49,7 +49,7 @@ body {
             border-right: 3vw;
         } }
       
-    @media screen and (max-width: 480px) {
+  @media screen and (max-width: 575px) {
         body {
             color: #2d2d2d;
             margin-left: 25vw; 
@@ -60,10 +60,11 @@ body {
 footer{
   align-items: center;
   text-align: center;
-  /*padding: 20px;*/
+  width: auto;
   margin-top: auto;
   margin-bottom: 0px;
-  /*margin-left: 10px;*/
+  padding: 55px 0px 9px 0px;
+  border-top:  1px solid #ebebeb;
 }
   @media screen and (max-width: 960px) {
     footer{
@@ -76,6 +77,7 @@ footer{
         align-items: center;
         text-align: center;
         margin-top: auto;
+        margin-bottom: 0px;
       } }
 
 .navbar-opacity{
@@ -90,7 +92,9 @@ footer{
 
 ------------*/   
 #espaçamento {
-  margin-top: 10vh;
+  margin-top: 1vh;
+  align-items: center;
+  align-items: center;
 }
 
 
@@ -180,7 +184,6 @@ footer{
         margin-bottom: 1.5vw;
       } }
 
-
 .head {
   align-items: center; 
   text-align: center;
@@ -199,7 +202,7 @@ footer{
         margin: auto;
       } }
      
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 575px) {
     .head{
         display: flex;
         align-items: center; 
@@ -226,7 +229,7 @@ footer{
         text-align: center;
         } }    
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 575px) {
     .div-head{
         margin-left: 3vw; 
         margin-right:3vw; 
@@ -251,7 +254,7 @@ footer{
           text-align: center;
       } } 
     
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 575px) {
     .head-text{
         width: auto;
         height: auto;
@@ -271,32 +274,80 @@ footer{
     box-sizing: border-box;
     object-fit: cover;
     z-index: -5;
-    background-color: rgba(0, 0, 0, 0.4);
+    filter: brightness(60%);
+    text-align: center;
+    display: inline-block;
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video { 
+      width:auto;
+      height: 100%;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  .video {
+      width:100%;
+      height: auto;
+  }
 }
 
 #roteiro-viagem {
   margin: auto !important;
   color:#ffffff ;
+  margin-bottom: 5vh;
+  align-content: center;
 }
   @media screen and (max-width: 960px) {
       #roteiro-viagem {
           margin-left: 4vw;
       } } 
     
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 575px) {
     #roteiro-viagem {
-      margin-left: 8vw;
-    }}
+      margin-left: 4vw;
+     }}
 
-#opacidade {
-  color: #2d2d2d;
-  opacity: rgba(0, 0, 0, 0.6) !important;
+.mapa-viagem {
+  align-content: center !important;
+  text-align: center;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
 }
 
-container-fluid {
-  opacity: rgba(0, 0, 0, 0.6) !important;
-  color: #2d2d2d;
+@media screen and (max-width: 960px) {
+  .mapa-viagem{
+    padding-bottom:50%;
+  } } 
+
+@media screen and (max-width: 575px) {
+  .mapa-viagem {
+  padding-bottom: 80%;
+  width: 40vh;
+  height: 30vh;
+  padding-left: 20%;
+ }}
+
+.mapa-viagem iframe {
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }
+
+@media screen and (max-width: 575px) {
+  .mapa-viagem iframe  {
+    left:-10;
+    top:0;
+    height:80%;
+    width:80%;
+    align-content: center;
+    align-items: center;
+ }}
+
 /*--------------
 
 03 Botões e Icones 
@@ -339,7 +390,7 @@ container-fluid {
         display: flex;
       } }    
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 575px) {
     .botão {
         font-size: 1vw;
         align-items: center;
@@ -370,9 +421,8 @@ container-fluid {
 
   @media screen and (max-width: 575px) {
     .fa {
-        margin-right: 1vw;
-        font-size: 3vw;
-          margin-left: 3vh;
+        font-size: 7vw;
+        align-items: center;
       } }
 
 /*-----------
@@ -386,7 +436,7 @@ h1, h2, h3, h4, h5, h6, a, br {
 
 h1 {
   font-weight: 500;
-  font-size: 2.5vw;
+  font-size: 2vw;
   color: #ffffff;
   text-align: center;
   margin-top: 1vw;
@@ -396,26 +446,20 @@ h1 {
 
   @media screen and (max-width: 1024px) {
     h1 {
-        font-weight: 500;
         font-size: 3vw;
-        text-align: center;
         margin-top: 1vw;
       } }
 
   @media screen and (max-width: 960px) {
     h1 {
-        font-weight: 500;
-        font-size: 2.8vw;
-        text-align: center;
+        font-size: 4vw;
         margin-top: 1vw;
 
       } }
 
   @media screen and (max-width: 575px) {
     h1 {
-        font-weight: 500;
         font-size: 6.5vw;
-        text-align: center;
         margin-top: 0.8vw;
       } }
 
@@ -423,41 +467,27 @@ h2 {
   font-weight: 400;
   font-size: 1.8vw;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   margin-top: 0.1vw;
-  margin-left: 6vw; 
-  margin-right: 6vw;
 }
 
     @media screen and (max-width: 1024px) {
     h2 {  
       font-weight: 400;
-      font-size: 3.2vw;
-      color: #ffffff;
-      text-align: center;
+      font-size: 2.8vw;
       margin-top: 0.1vw;
-      margin-left: 2vw; 
-      margin-right: 2vw;
-    }
+    } }
 
     @media screen and (max-width: 960px) {
     h2 {
-        font-weight: 400;
         font-size: 2vw;
-        text-align: center;
         margin-top: 0.2vw;
-        margin-left: 8vw; 
-        margin-right: 8vw;
       } }
 
   @media screen and (max-width: 575px) {
     h2 {
-        font-weight: 400;
         font-size: 1.5vw;
-        text-align: center;
         margin-top: 0.7vw;
-        margin-left: 6vw; 
-        margin-right: 6vw;
       } }
 
 h3 {
@@ -485,7 +515,7 @@ h3 {
 
 h4 {
     font-weight: 500;
-    font-size: 8vw;
+    font-size: 4vw;
     color: #ffffff;
     text-align: left;
     margin-top: auto;
@@ -500,7 +530,7 @@ h4 {
 
   @media screen and (max-width: 960px) {
     h4 {
-        font-size: 3.5vw;
+        font-size: 4.5vw;
       } }    
 
   @media screen and (max-width: 575px) {
@@ -511,8 +541,9 @@ h4 {
 
 h6 {
   font-weight: 100;
-  font-size: 1.1vw;
+  font-size: 1.5vw;
   color: #ffffff;
+  margin-left: 1vh;
 }
   @media screen and (max-width: 960px) {
     h6 {
@@ -523,26 +554,27 @@ h6 {
     h6 {
         font-weight: 100;
         font-size: 3vw;
+        align-content: center;
       }
 }
 
 a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 6vw;
+  font-size: 1.8vw;
   font-weight: 400;
 }
 
   @media screen and (max-width: 1024px) {
       a {
           text-decoration: none;
-          font-size: 3vw;
+          font-size: 2.2vw;
         } }
 
   @media screen and (max-width: 960px) {
       a {
           text-decoration: none;
-          font-size: 2.2vw;
+          font-size: 2.7vw;
         } }
   @media screen and (max-width: 575px) {
       a {
@@ -560,6 +592,7 @@ Contador
 .countdown {
 	margin-right: 10vh;
   margin-left: 10vh;
+  margin-bottom: 2vh;
   box-align: center;
 }
 
@@ -576,33 +609,38 @@ Contador
         } }
   @media screen and (max-width: 575px) {
       .countdown {
-          margin-right: 1.8vh;
-          margin-left: 1.8vh;
+          margin-right: 0.2vh;
+          margin-left: 0.2vh;
       } }
 
 .countdown .square {
 	display: inline-block;
   box-align: center;
+  align-items: baseline;
   width: 12vh;
   height: auto;
+  text-align: center !important;
 }
 
   @media screen and (max-width: 1024px) {
       .countdown .square {
           width: 11.2vh;
+          box-align: center;
         } }
 
   @media screen and (max-width: 960px) {
       .countdown .square {
-          width: 11vh;
+          width: 10.5vh;
+          box-align: center;
         } }
   @media screen and (max-width: 575px) {
       .countdown .square {
-        width: 3.2vh;
+        width: 10vh;
+        box-align: center;
       } }
 
 .countdown .numb {
-	font-size: 7vh;
+	font-size: 4vh;
 	font-weight: 500;
   box-align: center;
   width: auto;
@@ -619,7 +657,7 @@ Contador
 
   @media screen and (max-width: 960px) {
       .countdown .numb {
-          font-size: 5.5vw;
+          font-size: 4.6vw;
         } }
   @media screen and (max-width: 575px) {
       .countdown .numb {
@@ -628,12 +666,12 @@ Contador
 
 
 .countdown .text {
-  font-size: 3vh;
-  /*line-height: 15px;*/
+  font-size: 2.8vh;
   text-align: center;
-  color: #2d2d2d;
+  color: #ffffff;
   width: 4vh;
-  height: 3vh;
+  height: 4vh;
+  margin-top: 1vh;
 }
 
   @media screen and (max-width: 1024px) {
@@ -643,61 +681,9 @@ Contador
 
   @media screen and (max-width: 960px) {
       .countdown .text {
-          font-size: 2.5vw;
+          font-size: 2.1vw;
         } }
   @media screen and (max-width: 575px) {
       .countdown .text {
-          font-size: 4vw;
-            width: 10vh;
-            height: 2vh;
+            font-size: 4vw;
       } }
-
-
-/*---- backup do countdown 
-
-.wrap-countdown {
-  margin-bottom: 1px;
-  box-align: center !important;
-}
-
-.countdown .square {
-  display: inline-block;
-  box-align: right;
-}
-
-.countdown .square .numb {
-  font-size: 48px;
-  line-height: 90px;
-  font-weight: 500;
-  box-align: center;
-  width: 100px;
-  height: 90px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #f63440;
-}
-
-.countdown .square .text {
-  font-size: 18px;
-  line-height: 15px;
-  text-align: center;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-@media only screen and ( max-width: 991px ) {
-  .countdown .square {
-    margin-bottom: 20px;
-  }
-}
-
-.countdown .text {
-  font-size: 18px;
-  line-height: 15px;
-  text-align: center;
-  font-weight: 500;
-  color: #ffffff;
-  margin-top: 5px;
-}
-
- -----*/}
