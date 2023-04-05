@@ -80,12 +80,6 @@ footer{
         margin-bottom: 0px;
       } }
 
-.navbar-opacity{
-  margin-bottom: 5vw;
-  color: rgba(0, 0, 0, 0.9);
-
-}
-
 /*-------------
 
 02 Divisões e Elementos visuais
@@ -96,7 +90,6 @@ footer{
   align-items: center;
   align-items: center;
 }
-
 
 .profile-photo{
   display: flex; 
