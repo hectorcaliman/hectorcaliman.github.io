@@ -91,6 +91,7 @@ footer{
   align-items: center;
 }
 
+
 .profile-photo{
   display: flex; 
   align-items: center; 
@@ -254,7 +255,6 @@ footer{
         align-content: center;
         text-align: center;
       } }
-
 
 .video {
     position: fixed;
@@ -458,7 +458,7 @@ h1 {
 
 h2 {
   font-weight: 400;
-  font-size: 1.8vw;
+  font-size: 2.3vw;
   color: #ffffff;
   text-align: left;
   margin-top: 0.1vw;
@@ -556,6 +556,7 @@ a {
   color: #ffffff;
   font-size: 1.8vw;
   font-weight: 400;
+  text-decoration: none;
 }
 
   @media screen and (max-width: 1024px) {
@@ -576,6 +577,24 @@ a {
       } }
 
 
+a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+      
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+ }
+      
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  }
+      
+a:active {
+  text-decoration: none;
+}
 /*   
 
 Contador
@@ -680,4 +699,23 @@ Contador
       .countdown .text {
             font-size: 4vw;
       } }
+
+/*
+
+Modal
+
+*/
+#staticBackdropLabel {
+  color:#2d2d2d;
+}
+
+#staticBackdropLabel .h1 .a {
+  color:#2d2d2d;
+  align-items: center;
+  align-content: center;
+}
+
+#modal-texto{
+  color:#2d2d2d;
+}
 
